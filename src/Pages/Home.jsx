@@ -13,8 +13,8 @@ import img8 from '../Image/img/portfolio/8.jpg';
 import img9 from '../Image/img/portfolio/9.jpg';
 import img10 from '../Image/img/logo.png'; 
 import img11 from '../Image/img/slider/shadi.jpg';
-import img12 from '../Image/img/slider/2.jpg';
-import img13 from '../Image/img/slider/3.jpg';
+import img12 from '../Image/img/slider/metrimonial1.jpg';
+import img13 from '../Image/img/slider/metrimonial3.jpg';
 import aboutUsImg from '../Image/img/about-us.jpg';
 import aboutSssImg from '../Image/img/about-sss.jpg';
 import whyUsImg from '../Image/img/why-us-2.jpg';
@@ -56,7 +56,7 @@ function Header() {
   return (
     <>
       {/* Top Language Bar */}
-      <div className="bg-gray-100 text-center text-sm text-gray-700 py-2 px-4">
+      <div className="bg-gray-100 text-center text-sm text-gray-700 py-2 px-1">
         <div className="flex flex-wrap justify-center gap-3">
           {[
             'Assamese', 'Bengali', 'Gujarati', 'Hindi', 'Kannada',
@@ -572,8 +572,7 @@ function Footer() {
                 <i className="fas fa-phone-alt text-pink-600 mr-2"></i>
                 <div>
                   <h4 className="font-semibold">Phone Number</h4>
-                  <p>+91-96502 06995</p>
-                  <p>(011) 47522357</p>
+                  <p>011-25710036-37</p>
                 </div>
               </div>
               <div className="flex items-center">
@@ -587,7 +586,7 @@ function Footer() {
                 <i className="fas fa-map-marker-alt text-pink-600 mr-2"></i>
                 <div>
                   <h4 className="font-semibold">Location</h4>
-                  <p>312, Aggarwal Millenium Tower 1, Netaji Subhash Place, Pitampura, New Delhi, Delhi 110034</p>
+                  <p>CITIZEN REGIONAL OFFICE - DELHI. 810, 8th Floor Padma Tower-I Rajendra Place, New Delhi, Delhi, Delhi - 110008. India.</p>
                 </div>
               </div>
             </div>
@@ -607,9 +606,9 @@ function Footer() {
         </div>
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="mb-4 md:mb-0">
-            © Copyright 2024. All rights reserved. Website Designed By{' '}
+            © Copyright 2025. All rights reserved. Website Designed By 
             <a href="https://www.websunindia.com/" target="_blank" className="text-pink-500">
-              Raju Mishra
+              Bigdesign software technologies
             </a>.
           </p>
           <div className="flex space-x-4">
@@ -654,35 +653,6 @@ function SocialIcons() {
   );
 }
 
-function ContactModal() {
-  return (
-    <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div className="modal-dialog" role="document">
-        <div className="modal-content">
-          <div className="modal-header bg-pink-600 text-white">
-            <h5 className="modal-title" id="exampleModalLabel">Get In Touch</h5>
-            <button type="button" className="close text-white" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div className="modal-body">
-            <form className="space-y-4">
-              <input type="text" placeholder="Name" className="w-full p-2 border rounded" />
-              <input type="email" placeholder="Your Email" className="w-full p-2 border rounded" />
-              <input type="text" placeholder="Phone Number" className="w-full p-2 border rounded" />
-              <textarea placeholder="Enter Message Here..." rows="5" className="w-full p-2 border rounded"></textarea>
-              <div className="text-center">
-                <button className="border border-gray-400 text-gray-700 px-4 py-2 rounded hover:bg-gray-100">
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
 function App() {
   return (
@@ -703,7 +673,7 @@ function App() {
         <img src={callImg} className="fixed bottom-4 right-4 w-12 h-12" />
       </a>
       <SocialIcons />
-      <ContactModal />
+      
       <a href="#top" className="fixed bottom-4 left-4 bg-pink-600 text-white p-2 rounded-full hover:bg-pink-700">
         <i className="fas fa-angle-up"></i>
       </a>
