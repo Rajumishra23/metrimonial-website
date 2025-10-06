@@ -1,5 +1,6 @@
 import React from "react";
 import { UserGroupIcon, ShieldCheckIcon, HeartIcon, StarIcon } from "@heroicons/react/24/outline";
+import img4 from "../Image/img/portfolio/4.jpg"; // ✅ Correct image import path
 
 function About() {
   const features = [
@@ -20,16 +21,16 @@ function About() {
     <section className="bg-pink-50 py-20">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
 
-        {/* Image */}
+        {/* ✅ Image Section */}
         <div className="md:w-1/2">
           <img
-            src="about.png"
+            src={img4}
             alt="About Global Rishte"
-            className="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 w-full"
+            className="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 w-full h-[900px] object-cover"
           />
         </div>
 
-        {/* Content */}
+        {/* Content Section */}
         <div className="md:w-1/2 flex flex-col gap-6">
           {/* Heading */}
           <h2 className="text-5xl font-bold text-pink-600 leading-tight">
@@ -49,7 +50,10 @@ function About() {
           {/* Features */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
             {features.map((feature) => (
-              <div key={feature.title} className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition duration-300 flex items-start gap-4">
+              <div
+                key={feature.title}
+                className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition duration-300 flex items-start gap-4"
+              >
                 {feature.icon}
                 <div>
                   <h3 className="font-semibold text-pink-600 text-lg">{feature.title}</h3>
@@ -62,7 +66,10 @@ function About() {
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10 text-center">
             {stats.map((stat) => (
-              <div key={stat.label} className="bg-white rounded-xl shadow p-5 hover:shadow-lg transition duration-300">
+              <div
+                key={stat.label}
+                className="bg-white rounded-xl shadow p-5 hover:shadow-lg transition duration-300"
+              >
                 <h3 className="text-2xl font-bold text-pink-600">{stat.number}</h3>
                 <p className="text-gray-600 mt-1 text-sm">{stat.label}</p>
               </div>
@@ -71,7 +78,7 @@ function About() {
 
           {/* CTA Button */}
           <a
-            href="/membership"
+            href="#membership"
             className="mt-10 inline-block px-8 py-4 bg-pink-600 text-white rounded-full font-medium text-lg hover:bg-pink-700 transition"
           >
             Find Your Match Today
