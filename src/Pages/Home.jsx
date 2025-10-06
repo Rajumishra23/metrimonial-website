@@ -1,6 +1,8 @@
 import React from 'react';
 import {useEffect } from 'react';
-import { QuestionMarkCircleIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
+import Header from "../components/Header";
+
+
 
 import img1 from '../Image/img/portfolio/1.jpg';
 import img2 from '../Image/img/portfolio/2.jpg';
@@ -11,7 +13,6 @@ import img6 from '../Image/img/portfolio/6.jpg';
 import img7 from '../Image/img/portfolio/7.jpg';
 import img8 from '../Image/img/portfolio/8.jpg';
 import img9 from '../Image/img/portfolio/9.jpg';
-import img10 from '../Image/img/logo.png'; 
 import img11 from '../Image/img/slider/shadi.jpg';
 import img12 from '../Image/img/slider/metrimonial5.jpg';
 import img13 from '../Image/img/slider/metrimonial6.jpg';
@@ -47,121 +48,6 @@ import logo18 from '/clients-logo/18.png';
 import logo19 from '/clients-logo/19.png';
 import logo20 from '/clients-logo/20.png';
 
-
-
-
-function Header() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  return (
-    <>
-      {/* Top Language Bar */}
-      <div className="bg-gray-100 text-center text-sm text-gray-700 py-2 px-1">
-        <div className="flex flex-wrap justify-center gap-3">
-          {[
-            'Assamese', 'Bengali', 'Gujarati', 'Hindi', 'Kannada',
-            'Malayalam', 'Marathi', 'Punjabi', 'Tamil', 'Telugu', 'Urdu'
-          ].map((lang, index) => (
-            <React.Fragment key={lang}>
-              <a href="#" className="hover:text-pink-600">{lang}</a>
-              {index < 10 && <span>|</span>}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
-
-      {/* Main Navbar */}
-      <header className="bg-white shadow-md sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          {/* Logo */}
-          <a href="/">
-            <img src={img10} alt="Global Rishte Matrimonial Services" className="h-10 sm:h-12" />
-          </a>
-
-          {/* Desktop Right Side */}
-          <div className="hidden md:flex items-center space-x-2">
-            <span className="text-sm font-bold text-gray-900">Already a member?</span>
-            <a
-              href="/login"
-              className="text-sm text-pink-600 border border-pink-600 px-3 py-1 rounded-full font-medium hover:bg-pink-50 transition"
-            >
-              Login
-            </a>
-{/* Help Dropdown */}
-<div className="relative ml-4 group">
-  <div className="flex items-center text-sm text-gray-900 hover:text-pink-600 cursor-pointer">
-    <QuestionMarkCircleIcon className="h-4 w-4 text-gray-500 mr-1" />
-    Help
-    <ChevronDownIcon className="h-4 w-4 text-gray-500 ml-1 transition-transform duration-300 group-hover:rotate-180" />
-  </div>
-
-
-
-  {/* Dropdown */}
-  <div className="absolute right-0 mt-2 w-64 bg-white border border-gray-200 rounded shadow-lg p-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-    <p className="text-sm font-semibold text-gray-800 mb-2">24x7 Help</p>
-    <p className="text-sm text-gray-700">India: <span className="font-medium text-pink-600">+91 8144998877</span></p>
-    <p className="text-sm text-gray-700 mb-3">UAE: <span className="font-medium text-pink-600">+971 525060879</span></p>
-    <ul className="space-y-2 text-sm">
-      <li><a href="#" className="text-gray-700 hover:text-pink-600">Live Help</a></li>
-      <li><a href="/contact-us" className="text-gray-700 hover:text-pink-600">Contact Us</a></li>
-      <li><a href="#" className="text-gray-700 hover:text-pink-600">Feedback</a></li>
-      <li><a href="#" className="text-gray-700 hover:text-pink-600">Business Queries</a></li>
-      <li><a href="#" className="text-gray-700 hover:text-pink-600">Retail Stores</a></li>
-    </ul>
-  </div>
-</div>
-</div>
-
-
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <i className="fas fa-bars text-2xl text-gray-700"></i>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-white shadow-md`}>
-          <ul className="flex flex-col space-y-4 px-4 py-4 text-gray-700 text-sm">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/package">Package</a></li>
-            <li><a href="/clients">Clients</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/contact-us">Contact Us</a></li>
-            <li>
-              <span className="text-sm text-gray-700">Already a member?</span>
-              <a
-                href="/login"
-                className="text-pink-600 font-medium border border-pink-600 px-3 py-1 rounded-full block mt-1"
-              >
-                Login
-              </a>
-            </li>
-            <li>
-              <details>
-                <summary className="cursor-pointer text-gray-700">Help</summary>
-                <div className="mt-2 space-y-2 text-sm">
-                  <p>India: <span className="text-pink-600 font-medium">+91 8144998877</span></p>
-                  <p>UAE: <span className="text-pink-600 font-medium">+971 525060879</span></p>
-                  <a href="#" className="block hover:text-pink-600">Live Help</a>
-                  <a href="/contact-us" className="block hover:text-pink-600">Contact Us</a>
-                  <a href="#" className="block hover:text-pink-600">Feedback</a>
-                  <a href="#" className="block hover:text-pink-600">Business Queries</a>
-                  <a href="#" className="block hover:text-pink-600">Retail Stores</a>
-                </div>
-              </details>
-            </li>
-          </ul>
-        </nav>
-      </header>
-    </>
-  );
-}
 
 function Carousel() {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -354,7 +240,7 @@ function ClientsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {clients.map((client, index) => (
             <div key={index} className="bg-white rounded-2xl shadow-md overflow-hidden group hover:shadow-xl transition-all duration-300">
-              <div className="relative h-64 w-full">
+              <div className="relative h-[400px] w-full">
                 <img
                   src={client.img}
                   alt={client.name}
@@ -483,7 +369,7 @@ function GallerySection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((src, index) => (
             <a key={index} href={src} className="block">
-              <img src={src} alt={`Gallery ${index + 1}`} className="w-full h-48 object-cover rounded-lg hover:opacity-80" />
+              <img src={src} alt={`Gallery ${index + 1}`} className="w-full h-[400px] object-cover rounded-lg hover:opacity-80" />
             </a>
           ))}
         </div>
@@ -657,7 +543,6 @@ function SocialIcons() {
 function App() {
   return (
     <div>
-      <Header />
       <Carousel />
       <WelcomeSection />
       <ClientsSection />
@@ -665,7 +550,7 @@ function App() {
       <FactsSection />
       <GallerySection />
       <ClientsLogoSection />
-      <Footer />
+     
       <a href="https://api.whatsapp.com/send/?phone=919650206995" target="_blank">
         <img src={whatsappImg} className="fixed bottom-20 right-4 w-12 h-12" />
       </a>
