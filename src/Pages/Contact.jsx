@@ -65,7 +65,7 @@ function Contact() {
           <div className="space-y-6">
             <div className="bg-pink-50 p-6 rounded-3xl shadow-lg">
               <h3 className="text-xl font-bold text-pink-600 mb-3">Our Address</h3>
-              <p className="text-gray-700">123 Global Rishte Street, Mumbai, India</p>
+              <p className="text-gray-700">CITIZEN REGIONAL OFFICE - DELHI. 810, 8th Floor Padma Tower-I Rajendra Place, New Delhi, Delhi, Delhi - 110008. India.</p>
             </div>
 
             <div className="bg-pink-50 p-6 rounded-3xl shadow-lg">
@@ -88,15 +88,16 @@ function Contact() {
 
         {/* Map Placeholder */}
         <div className="mt-16 rounded-3xl overflow-hidden shadow-lg">
-          <iframe
-            title="Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.123456789!2d72.8777!3d19.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c63c0a123456%3A0xabcdef1234567890!2sMumbai%2C+India!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
-            width="100%"
-            height="400"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
+         <iframe
+  title="Office Location"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.612345345!2d77.17420071508423!3d28.639602982414676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03f765c10b99%3A0x5692d847db602b2c!2sPadma%20Tower%20I%2C%20Rajendra%20Place%2C%20New%20Delhi%2C%20Delhi%20110008!5e0!3m2!1sen!2sin!4v1728653218001!5m2!1sen!2sin"
+  width="100%"
+  height="400"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+/>
         </div>
       </div>
     </section>

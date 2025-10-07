@@ -1,6 +1,6 @@
 import React from "react";
 import { UserGroupIcon, ShieldCheckIcon, HeartIcon, StarIcon } from "@heroicons/react/24/outline";
-import img4 from "../Image/img/portfolio/4.jpg"; // ✅ Correct image import path
+import img4 from "../Image/img/portfolio/4.jpg";
 
 function About() {
   const features = [
@@ -25,7 +25,7 @@ function About() {
         <div className="md:w-1/2">
           <img
             src={img4}
-            alt="About Global Rishte"
+            alt="About us rishte"
             className="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-300 w-full h-[900px] object-cover"
           />
         </div>
